@@ -1,0 +1,12 @@
+{
+  "AppSyncApiName": "VoteApp",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2024-01-25T17:04:23.310Z",
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authVoteApp",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

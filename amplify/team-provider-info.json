@@ -10,6 +10,14 @@
       "StackName": "amplify-voteapp-staging-130945",
       "StackId": "arn:aws:cloudformation:eu-north-1:339712737772:stack/amplify-voteapp-staging-130945/5981f5f0-b85e-11ee-9777-0610e714ed90",
       "AmplifyAppId": "d2l43x7qz3n06i"
+    },
+    "categories": {
+      "auth": {
+        "VoteApp": {}
+      },
+      "api": {
+        "VoteApp": {}
+      }
     }
   }
 }

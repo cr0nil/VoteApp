@@ -1,0 +1,21 @@
+type Vote @model @auth(rules: [{allow: private}]) {
+  id: ID!
+  vote: String!
+  endTime: AWSDate
+  questionnaireID: ID! @index(name: "byQuestionnaire")
+}
+
+type Questionnaire @model @auth(rules: [{allow: private}]) {
+  id: ID!
+  title: String!
+  description: String
+  Vote: [Vote] @hasMany(indexName: "byQuestionnaire", fields: ["id"])
+  userID: ID! @index(name: "byUser")
+}
+
+type User @model @auth(rules: [{allow: private}]) {
+  id: ID!
+  name: String!
+  Questionnaires: [Questionnaire] @hasMany(indexName: "byUser", fields: ["id"])
+}
+ 
